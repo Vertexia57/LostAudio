@@ -53,12 +53,12 @@ int main()
 ## Cheat Sheet
 
 ```cpp
-void initAudio();
-void exitAudio();
-void updateAudio();
+void initAudio(); // Initializes LostAudio, playing on the primary sound device listen by the operating system
+void exitAudio(); // Closes LostAudio, unloading all sounds and sound streams left loaded
+void updateAudio(); // Required to be ran, updates the delta time of effects and removes sounds from the heap, saving memory
 
-void setMasterVolume(float volume);
-float getMasterVolume();
+void setMasterVolume(float volume); // Sets the overall volume, multiplicative with an individual sound's volume
+float getMasterVolume(); // Returns the master volume
 
 // [=============== Sound Functions ===============]
 
