@@ -85,7 +85,7 @@ namespace lost
 	/// <param name="panning">The panning of the sound -1.0f is left ear, 1.0f is right ear, 0.0f is center</param>
 	/// <param name="loopCount">The amount of times to loop, setting this as -1 or UINT_MAX loops it forever. It can be stopped with stopSound</param>
 	/// <returns></returns>
-	PlaybackSound* playSound(Sound sound, float volume = 1.0f, float panning = 0.0f, unsigned int loopCount = 0); // [!] TODO: Volume and Panning 
+	PlaybackSound* playSound(Sound sound, float volume = 1.0f, float panning = 0.0f, unsigned int loopCount = 0); 
 	
 	// Stops the sound being played
 	void stopSound(const PlaybackSound* sound);
