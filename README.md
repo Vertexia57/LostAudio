@@ -69,7 +69,7 @@ PlaybackSound* playSound(Sound sound, float volume, float panning, unsigned int 
 
 void stopSound(Sound sound); // Stops the all sounds playing that are using this sound, use the PlaybackSound return to manage individual ones
 void stopSound(const PlaybackSound* sound); // Stops the sound given
-void setSoundPaused(const PlaybackSound* sound, bool paused); // Pauses/Unpauses the sound given, (NOT IMPLEMENTED)
+void setSoundPaused(PlaybackSound* sound, bool paused); // Pauses/Unpauses the sound given, (NOT IMPLEMENTED)
 
 void setSoundVolume(PlaybackSound* sound, float volume); // Sets the volume of the sound given
 void setSoundPanning(PlaybackSound* sound, float panning); // The panning of the sound -1.0 is left ear, 1.0 is right ear, 0.0 is center
