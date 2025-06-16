@@ -141,4 +141,34 @@ In the latest release included in the github you can find a zip folder with the 
 - x86 Precompiled binaries
 - Include Headers
 
+To include LostAudio within a solution in Visual Studio you will need to modify the project settings you're including it in, as follows:
 
+- Add include directory, make sure you have Configuration set to "All Configurations" and Platform set to "All Platforms" when you do this
+
+![image](https://github.com/user-attachments/assets/fe15445c-d525-4fec-b446-a1cf48d78803)
+
+- You should add one that looks something like this but it is up to you where you put it
+
+![image](https://github.com/user-attachments/assets/4d591c29-e7af-4878-89f7-a3fab71903c3)
+
+- Add library directory
+
+![image](https://github.com/user-attachments/assets/846e49d9-7d2d-4b09-9c21-0a4746a33bae)
+![image](https://github.com/user-attachments/assets/d82df36a-8225-4415-97cc-8f94654c1e78)
+
+- Setup debug, release and their respective x64 and x86 libraries, Note each one has to be set for each individual configuration and platform
+    - LostAudio.lib = Release x64
+    - LostAudio_d.lib = Debug x64
+    - LostAudio_x86.lib = Release x86
+    - LostAudio_x86d.lib = Debug x86
+    - LostAudio_mt.lib = Release x64 Multi-Threaded / "/MT" build 
+    - LostAudio_x86mt.lib = Release x86 Multi-Threaded / "/MT" build 
+
+![image](https://github.com/user-attachments/assets/5565947c-f0de-45b0-9fe1-93ff3d0e32de)
+
+Once you've done that, you should be all good to go!
+
+### Implementing from Source
+
+Currently the github does not include CMake and so this feature isn't properly supported
+If you are using Visual Studio you can download the entire repository and build from there and then follow the previous steps listed
