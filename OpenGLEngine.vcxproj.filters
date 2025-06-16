@@ -68,5 +68,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Lost\ResourceManager.h" />
+    <None Include="README.md" />
   </ItemGroup>
 </Project>
