@@ -377,3 +377,6 @@ FodyWeavers.xsd
 /data/32Bit.wav
 /data/Cascade.wav
 /data/Compass.wav
+/Test/Test.vcxproj
+/Test/Test.vcxproj.filters
+/Test/OpenGLEngine.cpp
