@@ -38,6 +38,9 @@ namespace lost
 		inline void _setIsPlaying() { a_Playing.write(false); };
 		inline _PlaybackData& _getPlaybackData() { return a_PlaybackData; };
 
+		inline bool _getPaused() { return a_Paused.read(); };
+		inline void _setPaused(bool paused) { a_Paused.write(paused); };
+
 		inline float _getVolume() { return a_Volume.read(); };
 		inline void _setVolume(float volume) { a_Volume.write(volume); }
 
@@ -53,6 +56,7 @@ namespace lost
 
 		_HaltWrite<float> a_Volume;
 		_HaltWrite<float> a_Panning;
+		_HaltWrite<bool>  a_Paused;
 
 		// Playback data
 		int m_FormatFactor;
@@ -91,7 +95,7 @@ namespace lost
 	void stopSound(const PlaybackSound* sound);
 	// Stops the all sounds playing that are using this sound, use the PlaybackSound return to manage individual ones
 	void stopSound(Sound sound);
-	void setSoundPaused(const PlaybackSound* sound, bool paused);
+	void setSoundPaused(PlaybackSound* sound, bool paused);
 
 	void setSoundVolume(PlaybackSound* sound, float volume);
 	// The panning of the sound -1.0f is left ear, 1.0f is right ear, 0.0f is center
@@ -112,12 +116,15 @@ namespace lost
 	/// <param name="loopCount">The amount of times to loop, setting this as -1 or UINT_MAX loops it forever</param>
 	/// <returns></returns>
 	void playSoundStream(SoundStream soundStream, float volume = 1.0f, float panning = 0.0f, unsigned int loopCount = 0);
-	void stopSoundStream(SoundStream soundStream);
-	bool isSoundStreamPlaying(SoundStream sound);
+	void stopSoundStream(SoundStream soundStream); 
+	
+	void setSoundStreamPaused(SoundStream soundStream, bool paused);
 
 	void setSoundStreamVolume(SoundStream sound, float volume);
 	// The panning of the sound -1.0f is left ear, 1.0f is right ear, 0.0f is center
 	void setSoundStreamPanning(SoundStream sound, float panning);
+
+	bool isSoundStreamPlaying(SoundStream sound);
 }
 //
 //// Two-channel sawtooth wave generator.

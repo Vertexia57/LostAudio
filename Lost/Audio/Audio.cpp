@@ -85,6 +85,9 @@ namespace lost
 		std::vector<PlaybackSound*> sounds = inData->activeSounds.read();
 		for (unsigned int i = 0; i < sounds.size(); i++)
 		{
+			if (sounds.at(i)->_getPaused())
+				continue;
+
 			_PlaybackData& playbackData = sounds.at(i)->_getPlaybackData();
 
 			unsigned int inFormatSize = playbackData.bytesPerSample;
@@ -186,6 +189,10 @@ namespace lost
 		for (unsigned int i = 0; i < streams.size(); i++)
 		{
 			_SoundStream& stream = *streams.at(i);
+
+			if (stream._getPaused())
+				continue;
+
 			const _SoundInfo& streamInfo = stream._getSoundInfo();
 
 			unsigned int inFormatSize = streamInfo.bitsPerSample / 8;
@@ -224,7 +231,7 @@ namespace lost
 			const char* data = stream._getNextDataBlock();
 
 			// Get volume and panning info
-			float volume = stream._getVolume();
+			float volume = stream._getVolume() * volumeDecrement * getMasterVolume();
 			float panning = fmaxf(fminf(stream._getPanning(), 1.0f), -1.0f);
 
 			for (int sample = 0; sample < sampleWrite / channelCount; sample++)
@@ -539,6 +546,7 @@ namespace lost
 
 	PlaybackSound::PlaybackSound(_Sound* soundPlaying, float volume, float panning, unsigned int loopCount)
 		: a_Playing{ true }
+		, a_Paused{ false }
 		, a_Volume{ volume }
 		, a_Panning{ fmaxf(fminf(panning, 1.0f), -1.0f) }
 	{
@@ -616,6 +624,11 @@ namespace lost
 		return _audioHandler.stopSounds(sound);
 	}
 
+	void setSoundPaused(PlaybackSound* sound, bool paused)
+	{
+		sound->_setPaused(paused);
+	}
+
 	void setSoundVolume(PlaybackSound* sound, float volume)
 	{
 		sound->_setVolume(volume);
@@ -645,6 +658,11 @@ namespace lost
 	void stopSoundStream(SoundStream soundStream)
 	{
 		_audioHandler.stopSoundStream(soundStream);
+	}
+
+	void setSoundStreamPaused(SoundStream soundStream, bool paused)
+	{
+		soundStream->_setPaused(paused);
 	}
 
 	bool isSoundStreamPlaying(SoundStream sound)
