@@ -1,0 +1,85 @@
+# Blender 4.0.2 MTL File: 'Finger.blend'
+# www.blender.org
+
+newmtl Body5F
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:/Avatars/Nardoragon 3.0 real/Assets/[ Avatar Data ]/Goth Bitch/Textures/Body_Base_color.png
+map_Bump -bm 1.000000 D:\Avatars\Nardoragon 3.0 real\Assets\Dragon\Textures\Maps\Body_Normal.png
+
+newmtl Eyes
+Ns 250.000000
+Ka 0.500000 0.500000 0.500000
+Ks 0.500000 0.500000 0.500000
+Ni 1.450000
+d 1.000000
+illum 3
+map_Kd D:/Avatars/Nardoragon 3.0 real/Assets/[ Avatar Data ]/Goth Bitch/Textures/Eyes_Base_color.png
+map_Ke D:/Avatars/Nardoragon 3.0 real/Assets/[ Avatar Data ]/Goth Bitch/Textures/Eyes_Base_color.png
+
+newmtl Fluff
+Ns 10.000005
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:/Avatars/Nardoragon 3.0 real/Assets/[ Avatar Data ]/Goth Bitch/Textures/Fluff_Base_color.png
+
+newmtl Material.003
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:/Avatars/Nardoragon 3.0 real/Assets/[ Avatar Data ]/Goth Bitch/Textures/Material.002_Base_color.png
+
+newmtl Misc
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:/Avatars/Nardoragon 3.0 real/Assets/[ Avatar Data ]/Goth Bitch/Textures/Misc_Base_color.png
+
+newmtl Saliva
+Ns 250.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl Specular
+Ns 1000.000000
+Ka 1.000000 1.000000 1.000000
+Kd 1.000000 1.000000 1.000000
+Ks 0.500000 0.500000 0.500000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 2
+
+newmtl maw
+Ka 1.000000 1.000000 1.000000
+Ks 0.781818 0.781818 0.781818
+Ni 1.450000
+d 1.000000
+illum 2
+map_Kd D:/Avatars/Nardoragon 3.0 real/Assets/Imports/_MainNardoragon Maw/Textures/Maw/MawBase.png
+map_Ns D:/Avatars/Nardoragon 3.0 real/Assets/Imports/_MainNardoragon Maw/Textures/Maw/MawRoughness.png
+map_refl D:/Avatars/Nardoragon 3.0 real/Assets/Imports/_MainNardoragon Maw/Textures/Maw/MawMetallic.png
+map_Ke D:/Avatars/Nardoragon 3.0 real/Assets/Imports/_MainNardoragon Maw/Textures/Maw/MawEmission.png
+map_Bump -bm 1.000000 D:/Avatars/Nardoragon 3.0 real/Assets/Imports/_MainNardoragon Maw/Textures/Maw/MawNormal.png
