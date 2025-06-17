@@ -139,7 +139,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__WINDOWS_WASAPI__;LOST_DEBUG_MODE;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__WINDOWS_WASAPI__;LOST_AUDIO_QUALITY_MEDIUM;LOST_DEBUG_MODE;WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
@@ -154,7 +154,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__WINDOWS_WASAPI__;LOST_RELEASE_MODE;WIN32;NDEBUG;_CONSOLE;LOST_RELEASE_MODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__WINDOWS_WASAPI__;LOST_AUDIO_QUALITY_MEDIUM;LOST_RELEASE_MODE;WIN32;NDEBUG;_CONSOLE;LOST_RELEASE_MODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
@@ -171,7 +171,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__WINDOWS_WASAPI__;LOST_RELEASE_MODE;WIN32;NDEBUG;_CONSOLE;LOST_RELEASE_MODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__WINDOWS_WASAPI__;LOST_AUDIO_QUALITY_MEDIUM;LOST_RELEASE_MODE;WIN32;NDEBUG;_CONSOLE;LOST_RELEASE_MODE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>
@@ -187,7 +187,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__WINDOWS_WASAPI__;LOST_DEBUG_MODE;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__WINDOWS_WASAPI__;LOST_AUDIO_QUALITY_MEDIUM;LOST_DEBUG_MODE;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <Optimization>Disabled</Optimization>
     </ClCompile>
@@ -203,7 +203,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__WINDOWS_WASAPI__;LOST_RELEASE_MODE;NDEBUG;_CONSOLE;LOST_RELEASE_MODE;%(PreprocessorDefinitions);</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__WINDOWS_WASAPI__;LOST_AUDIO_QUALITY_MEDIUM;LOST_RELEASE_MODE;NDEBUG;_CONSOLE;LOST_RELEASE_MODE;%(PreprocessorDefinitions);</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
     <Link>
@@ -220,7 +220,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>__WINDOWS_WASAPI__;LOST_RELEASE_MODE;NDEBUG;_CONSOLE;LOST_RELEASE_MODE;%(PreprocessorDefinitions);</PreprocessorDefinitions>
+      <PreprocessorDefinitions>__WINDOWS_WASAPI__;LOST_AUDIO_QUALITY_MEDIUM;LOST_RELEASE_MODE;NDEBUG;_CONSOLE;LOST_RELEASE_MODE;%(PreprocessorDefinitions);</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
     </ClCompile>

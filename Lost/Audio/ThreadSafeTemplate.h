@@ -6,9 +6,7 @@ namespace lost
 {
 
 	// A thread safe template which does not halt the read function, only the write
-	// Eg. the main thread needs to write and read to the audio data and can halt
-	// but the audio thread cannot halt. 
-	// This allows for that
+	// Eg. the main thread needs to write and read to the audio data and can halt but the audio thread cannot halt. 
 	template <typename T>
 	class _HaltWrite
 	{
@@ -36,6 +34,8 @@ namespace lost
 		std::mutex m_Mutex;
 	};
 
+	// A thread safe template which does not halt the write function, only the read
+	// Eg. the main thread needs to read from the audio data and can halt
 	template <typename T>
 	class _HaltRead
 	{
