@@ -166,7 +166,7 @@ At the end of processing a sound or the master track, LostAudio will apply any e
 `processChunk()` is defined as:
 
 ```cpp
-virtual void (AudioSample inBuffer[LOST_AUDIO_BUFFER_COUNT], AudioSample outBuffer[LOST_AUDIO_BUFFER_COUNT]);
+virtual void processChunk(AudioSample inBuffer[LOST_AUDIO_BUFFER_COUNT], AudioSample outBuffer[LOST_AUDIO_BUFFER_COUNT]);
 ```
 
 `LOST_AUDIO_BUFFER_COUNT` is a macro defined by the `Audio.h` header, it is set to the amount of samples the audio buffer has **in total**, which is the amount of overrall samples multiplied by the amount of channels used in the engine, which is always 2 in this case
