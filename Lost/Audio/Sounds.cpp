@@ -57,10 +57,10 @@ namespace lost
 		// _RIFFWAVEHeaderData is in the exact same format as a PCM wave header, so all we need to do is do the sanity checks
 
 		// Sanity Checks
-		if (strcmp(outData.riffText, "RIFF") != 1 ||
-			strcmp(outData.waveText, "WAVE") != 1 ||
-			strcmp(outData.fmtText, "fmt ") != 1 ||
-			strcmp(outData.dataText, "data") != 1)
+		if (strncmp(outData.riffText, "RIFF", 4) != 0 ||
+			strncmp(outData.waveText, "WAVE", 4) != 0 ||
+			strncmp(outData.fmtText,  "fmt ", 4) != 0 ||
+			strncmp(outData.dataText, "data", 4) != 0)
 		{
 			debugLog(std::string("Wave file \"") + fileLocation + "\" failed to load, invalid format\nMust be PCM/raw .wav file (RIFF WAVE PCM)", LOST_LOG_ERROR);
 			fclose(openFile); // Close file
